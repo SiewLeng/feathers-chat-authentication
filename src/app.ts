@@ -59,14 +59,21 @@ app.use(express.errorHandler({ logger } as any));
 app.hooks(appHooks);
 
 /*
-app.service('users').create({
-  id: 'b053747d-0db2-473e-a578-ebf7186225fb',
-  auth0Id: '2058c91b-6f1b-4b82-880d-e9c3c790d61e',
-  email: 'siewleng.lim@gmail.com',
-  password: '123456',
-  dateOfBirth: new Date('1970-08-07'),
-  hobbies: ['reading']
-});
+app.service('users').create(
+  {
+    id: 'b053747d-0db2-473e-a578-ebf7186225fb',
+    auth0Id: '2058c91b-6f1b-4b82-880d-e9c3c790d61e',
+    email: 'siewleng.lim@gmail.com',
+    password: '123456',
+    dateOfBirth: new Date('1970-08-07'),
+    hobbies: ['reading']
+  }, 
+  { 
+      headers: {
+        'accessToken': 'xcgbnmkl;'
+      }
+  }
+);
 */
 
 /*
@@ -77,7 +84,25 @@ app.service('users').create({
   password: '123456',
   dateOfBirth: new Date('2001-10-25'),
   hobbies: ['eating korean food']
-});
+}, {});
+*/
+
+/*
+app.service('users').create(
+  {
+    id: '41eb31ff-3509-4743-b798-85d7dbbc145d',
+    auth0Id: 'eea25dd6-aeed-4b00-8e82-4929ad43131f',
+    email: 'apple@gmail.com',
+    password: '123456',
+    dateOfBirth: new Date('1998-10-25'),
+    hobbies: []
+  }, 
+  { 
+    headers: {
+      'accessToken': 'xcgbnmkl;'
+    }
+  }
+);
 */
 
 export default app;

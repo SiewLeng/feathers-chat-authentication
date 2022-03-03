@@ -14,7 +14,9 @@ export default function (app: Application): Model<any> {
     email: { type: String, required: true,  unique: true, lowercase: true },
     password: { type: String, required: true },
     dateOfBirth: { type: Date, required: true },
-    hobbies: { type: [String] }
+    hobbies: { type: [String] },
+    createdBy: { type: String, required: true },
+    updatedBy: { type: String, required: true }
   }, {
     timestamps: true
   });

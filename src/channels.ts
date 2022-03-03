@@ -16,8 +16,6 @@ export default function(app: Application): void {
   app.on('login', (authResult: any, { connection }: any): void => {
     // connection can be undefined if there is no
     // real-time connection, e.g. when logging in via REST
-    console.log('user has logged in successfully');
-    console.log({ authResult });
     if(connection) {
       // Obtain the logged in user from the connection
       // const user = connection.user;
