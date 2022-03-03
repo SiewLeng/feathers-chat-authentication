@@ -132,4 +132,10 @@ app.service('users').Model.aggregate([
 });
 */
 
+app.service('messages').find({ query: { num: 5 }}).then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+})
+
 export default app;
