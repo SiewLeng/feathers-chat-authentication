@@ -19,6 +19,7 @@ import channels from './channels';
 import { HookContext as FeathersHookContext } from '@feathersjs/feathers';
 import authentication from './authentication';
 import mongoose from './mongoose';
+import e from 'express';
 // Don't remove this comment. It's needed to format import lines nicely.
 
 const app: Application = express(feathers());
@@ -103,6 +104,32 @@ app.service('users').create(
     }
   }
 );
+*/
+
+/*
+app.service('users').get('6220698af20d6b101ece0373', {}).then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+});
+*/
+
+/*
+app.service('users').Model.aggregate([
+  { $match: { id: 'b053747d-0db2-473e-a578-ebf7186225fb' } },
+  {
+    $lookup: {
+      from: 'messages',
+      localField: 'id',
+      foreignField: 'userId',
+      as: 'messages'
+    }
+  }
+]).then((result) => {
+  console.log(result);
+}).catch((err) => {
+  console.log(err);
+});
 */
 
 export default app;
