@@ -1,5 +1,5 @@
 import { Service, MongooseServiceOptions } from 'feathers-mongoose';
-import { Params } from "@feathersjs/feathers";
+import { Params } from '@feathersjs/feathers';
 import { Application } from '../../declarations';
 import services from '..';
 
