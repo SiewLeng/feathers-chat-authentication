@@ -6,7 +6,6 @@ describe('authentication', () => {
     assert.ok(app.service('authentication'));
   });
   
-  /*
   describe('local strategy', () => {
     const userInfo = {
       email: 'someone@example.com',
@@ -35,6 +34,5 @@ describe('authentication', () => {
       assert.ok(user, 'Includes user in authentication data');
     });
   });
-  */
- 
+
 });
